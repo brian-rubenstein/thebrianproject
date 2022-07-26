@@ -1,0 +1,112 @@
+/* start of full page styling */
+:root {
+    --title-color:  #42a1c6;
+    --subtitle-color: #f7e6ff;
+    --background-color:  #1f1f2e;
+    --background-color2: #525260;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* end of full page styling */
+
+/* start of header styling */
+header {
+    width: 100vw;
+    height: 50px;
+    background-color: var(--title-color);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: right;
+}
+
+#navbar {
+    width: 300px;
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#navbar a {
+    color: var(--subtitle-color);
+}
+
+#navbar a:hover {
+    color: var(--background-color);
+}
+
+#navbar a:active {
+    color: var(--subtitle-color);
+}
+/* end of header styling */
+
+/* start of welcome section styling */
+#welcome-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    padding: 50px 0px 0px 0px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* end of welcome section styling */
+
+/* start of project section styling */
+#projects {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#project-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 100px;
+    text-align: center;
+}
+
+.project-tile {
+    width: 100px;
+    height: 200px;
+    background-color: var(--subtitle-color);
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+/* end of project section styling */
+
+/* start of contact section styling */
+#contact {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: var(--title-color);
+    margin: 0;
+}
+
+p {
+    color: var(--subtitle-color);
+    text-align: center;
+}
+/* end of contact section styling */
+
+
