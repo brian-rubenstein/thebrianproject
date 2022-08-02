@@ -1,11 +1,12 @@
 /* start of full page styling */
 :root {
     font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     --color1:  #42a1c6;
     --color2: #f7e6ff;
     --color3:  #1f1f2e;
-    --color4: #525260;
+    --color4: #e3ddcfff;
 }
 
 /* page reset */
@@ -18,59 +19,39 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: var(--color3);
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+/* end of full page styling */
+
+/* start of about me section styling */
+#about-bar {
+    width: 250px;
+    height: 95%;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--color3);
+    background-color: var(--color4);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.section-title{
-    color: var(--color2);
-    font-style: italic;
-    font-size: 2.5rem;
-    margin: 15px 0px;
+img {
+    border: 1px black solid;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
 }
-/* end of full page styling */
-
-/* start of header styling */
-#page-title {
-    width: 100%;
-    height: 20%;
-    color: var(--color2);
-    font-size: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* end of header styling */
-
-/* start of portfolios section styling */
-#portfolios {
-    height: 60%;
-    width: 100%;
-}
-
-#portfolios-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.project-tile {
-    margin: 0px 10px;
-    background-color: var(--color4);
-    height: 400px;
-    width: 400px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-/* end of portfolios section styling */
+/* end of about me section styling */
 
 /* start of contact info section styling */
 #contact-info {
-    height: 20%;
-    width: 100%;
+    position: fixed;
+    bottom: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +59,7 @@ body {
 
 #contacts-box{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-items: center;
     padding: 10px;
     margin: 0px 15px;
@@ -90,6 +71,68 @@ body {
     color: white;
     font-weight: bold;
 }
+/* end of contact info section styling */
+
+/* start of portfolios section styling */
+#portfolio {
+    height: 95%;
+    width: 95%;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+#portfolio h2{
+    height: 5%;
+    width: 100%;
+    margin: 2rem 0rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#portfolios-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.project-tile {
+    height: 380px;
+    width: 380px;
+    margin: 0px 10px;
+    padding: 20px;
+    background-color: var(--color4);
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.languages {
+    display: block;
+    font-weight: bold;
+}
+
+.project-tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 20px black;
+}
+
+.project-tile:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 10px black;
+}
+
+/* end of portfolios section styling */
+
+
 
 
 
